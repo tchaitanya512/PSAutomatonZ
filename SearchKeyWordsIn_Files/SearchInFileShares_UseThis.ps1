@@ -31,6 +31,12 @@ $SearchData = 'Montevideo,SecondSearchKeyword' #GIve the First Search term (Mand
 $controls = $SearchData.split(",");
 $Segmentcheck =''  #GIve the Keyword to search further (optional)
 
+if (-not(Test-Path -Path $inputFiles))
+{
+
+New-Item -Path $inputFiles -ItemType Directory -Force
+
+}
 
 
 $InitArr = @()
